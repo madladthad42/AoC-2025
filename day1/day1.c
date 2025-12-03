@@ -30,6 +30,8 @@ int main(int argc, char* argv[]){
         rotation+= change;
         if(rotation == 0)
             count2++;
+        else if((rotation-change > 0 && rotation < 0) || (rotation-change < 0 && rotation > 0))
+            count2++;
         while(rotation > 99){
             rotation-=100;
             count2++;
@@ -40,8 +42,7 @@ int main(int argc, char* argv[]){
         }
         if(rotation == 0)
             count1++;
-        if((rotation-change > 0 && rotation < 0) || (rotation-change < 0 && rotation > 0))
-            count2++;
+        
         //printf("%s %d %d\n", leng, rotation, count);
     }
     fclose(hithere);
