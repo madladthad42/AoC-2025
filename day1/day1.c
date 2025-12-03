@@ -5,9 +5,6 @@
 #include <fcntl.h>
 #include <sys/stat.h>
 
-int count1 = 0;
-int count2 = 0;
-
 int getChange(char* input){
     char first = input[0];
     input[0] = '0';
@@ -16,10 +13,12 @@ int getChange(char* input){
         change *= -1;
     return change;
 }
-int main(int argc, char* argv[]){
+int main(){
 
     int rotation = 50;
     int change = 0;
+    int count1 = 0;
+    int count2 = 0;
     FILE* hithere = fopen("./d1.txt", "r");
 
     char leng[6];
